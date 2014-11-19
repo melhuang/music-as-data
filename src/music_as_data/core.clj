@@ -24,20 +24,37 @@
   (defsample hihat "HiHats1/hihat2.wav")
 
   (create-notes)
-  ; (p (pattern [(chord A2 E5)]))
-  ; (p [(chord hihat A3)])
+  (p (pattern [(chord A2 E5)]))
+  (p [(chord hihat A3)])
+  ;;(p (pattern [(chord A2 E5)]))
+  ;;(p [(chord hihat A3)])
+
+  ; (defn melody []
+  ;   (p (pattern [(chord C4 E4 kick)]))
+  ;   (p (pattern [(chord G3 D4)]))
+  ;   (p (pattern [(chord A3 C4 kick)]))
+  ;   (p (pattern [(chord E3 B3)]))
+  ;   (p (pattern [(chord F3 A3 kick)]))
+  ;   (p (pattern [(chord C3 G3)]))
+  ;   (p (pattern [(chord F3 A3 kick)]))
+  ;   (p (pattern [(chord G3 D3)]))
+  ; )
 
   (defn melody []
-    (p [(chord C4 kick)])
-    (p [(chord G3)])
-    (p [(chord A3 kick)])
-    (p [(chord E3)])
-    (p [(chord F3 kick)])
-    (p [(chord C3)])
-    (p [(chord F3 kick)])
+    (p [C4])
+    (p [G3])
+    (p [A3])
+    (p [E3])
+    (p [F3])
+    (p [C3])
+    (p [F3])
     (p [G3])
   )
+
   ;; (times 4 (p (pattern [C4] [_] [G3] [_] [A3] [_] [E3] [_] [F3] [_] [C3] [_] [F3] [_] [G3])))
+
+  ;;(p (pattern [(chord melody A3)]))
+
   (times 1 (melody))
 
   (defn fast_part []
