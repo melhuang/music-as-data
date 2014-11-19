@@ -20,20 +20,21 @@
   (require 'music-as-data.core)
   (in-ns 'music-as-data.core)
 
+  (defsample kick "KickDrums1/kickdrum6.wav")
   (defsample hihat "HiHats1/hihat2.wav")
 
   (create-notes)
-  (p (pattern [(chord A2 E5)]))
-  (p [(chord hihat A3)])
+  ; (p (pattern [(chord A2 E5)]))
+  ; (p [(chord hihat A3)])
 
   (defn melody []
-    (p [C4])
-    (p [G3])
-    (p [A3])
-    (p [E3])
-    (p [F3])
-    (p [C3])
-    (p [F3])
+    (p [(chord C4 kick)])
+    (p [(chord G3)])
+    (p [(chord A3 kick)])
+    (p [(chord E3)])
+    (p [(chord F3 kick)])
+    (p [(chord C3)])
+    (p [(chord F3 kick)])
     (p [G3])
   )
   ;; (times 4 (p (pattern [C4] [_] [G3] [_] [A3] [_] [E3] [_] [F3] [_] [C3] [_] [F3] [_] [G3])))
@@ -48,7 +49,7 @@
     (p [E3 G3])
     (p [F3 C4])
     (p [B3 G3])
-    (p [C4])
+    (p [C4 _])
   )
 
   (times 2 (fast_part))
@@ -72,7 +73,7 @@
   :setup setup :draw draw :size [200 200])
 
 (defn start [applet]
-  (applet-start applet))
+(applet-start applet))
 
 (defn end [applet]
   (applet-exit applet))

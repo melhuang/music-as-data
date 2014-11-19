@@ -1,0 +1,21 @@
+(require 'music-as-data.core)
+(in-ns 'music-as-data.core)
+(create-notes)
+(p A4)
+(p [A4])
+(p (pattern [A4])
+)
+(p (pattern [A4]))
+(p (pattern [D#3]))
+Gb0
+(p Gb)
+(defnote Gb3 @*sine*)
+defnote
+(create-notes)
+(ns music-as-data.signalsnotes
+  (:use [music-as-data.signals]
+        [music-as-data.globals])
+  (:import [music_as_data.elements Melement]))
+defnote
+(defnote Gb3 @*sine*)
+(p Gb3)
